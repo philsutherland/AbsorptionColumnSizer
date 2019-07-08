@@ -1,3 +1,6 @@
+from sys import exit
+
+
 class Menu():
     @staticmethod
     def main_menu():
@@ -28,7 +31,7 @@ class Menu():
             aboutSubMenu()
         elif selection == 4:
             print("Goodbye!")
-            sys.exit(0)
+            exit(0)
         else:
             print("Invalid Selection!")
-            mainMenu()
+            main_menu()
