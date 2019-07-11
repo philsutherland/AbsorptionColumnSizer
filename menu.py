@@ -6,17 +6,15 @@ class Menu():
     def main_menu():
         selection = 0
 
-        print("""
-|-------------------------------------------------------------|
-|                          Main Menu                          |
-|-------------------------------------------------------------|
-| Options:                                                    |
-|        1. Size Absorption Column Menu                       |
-|        2. Optimize Absorption Column Menu                   |
-|        3. About                                             |
-|        4. Exit                                              |
-|-------------------------------------------------------------|
-        """)
+        print("|-------------------------------------------------------------|")
+        print("|                          Main Menu                          |")
+        print("|-------------------------------------------------------------|")
+        print("| Options:                                                    |")
+        print("|        1. Size Absorption Column Menu                       |")
+        print("|        2. Optimize Absorption Column Menu                   |")
+        print("|        3. About                                             |")
+        print("|        4. Exit                                              |")
+        print("|-------------------------------------------------------------|")
 
         try:
             selection = int(input("Select Option: "))
