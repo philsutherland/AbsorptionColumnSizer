@@ -22,11 +22,11 @@ class Menu():
             print("Invalid Selection!")
 
         if selection == 1:
-            sizeAbsorptionSubMenu()
+            size_absorption_sub_menu()
         elif selection == 2:
-            optimizeAbsorptionSubMenu()
+            optimize_absorption_sub_menu()
         elif selection == 3:
-            aboutSubMenu()
+            about_sub_menu()
         elif selection == 4:
             print("Goodbye!")
             exit(0)
