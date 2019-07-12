@@ -33,25 +33,7 @@ class TextMenu:
             print(FormattedTextMenu.error_title("Invalid Selection!"))
             self.navigate()
 
-        # if selection == 1:
-        #     Menu.size_absorption_sub_menu()
-        # elif selection == 2:
-        #     Menu.optimize_absorption_sub_menu()
-        # elif selection == 3:
-        #     Menu.about_sub_menu()
-        # elif selection == 4:
-        #     Menu.clear()
-        #     print(FormattedTextMenu.main_title("Goodbye!"))
-        #     exit(0)
-        # else:
-        #     print(FormattedTextMenu.error_title("Invalid Selection!"))
-        #     Menu.main_menu()
-
     @staticmethod
     def clear():
         os.system("cls")
         print("")
-
-    # @classmethod
-    # def navigate(cls):
-    #     print("This is how the menu navigates")
