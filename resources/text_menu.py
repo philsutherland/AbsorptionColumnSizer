@@ -29,6 +29,9 @@ class TextMenu:
 
         if str(selection) in nav_map:
             print("Go to: " + self.options[nav_map[str(selection)]])
+        else:
+            print(FormattedTextMenu.error_title("Invalid Selection!"))
+            self.navigate()
 
         # if selection == 1:
         #     Menu.size_absorption_sub_menu()
