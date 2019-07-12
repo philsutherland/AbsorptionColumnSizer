@@ -26,3 +26,10 @@ class FormattedTextMenu:
             options_text += "|" + ("{:<" + str(MENU_LEN - 2) + "}").format((" " * 6)
                                                                            + str(options.index(option) + 1) + ". " + option) + "|\n"
         return options_text + outer_line
+
+    @staticmethod
+    def error_title(title):
+        outer_line = "|" + "#" * (MENU_LEN - 2) + "|"
+        middle_line = "|" + \
+            ("{:^" + str(MENU_LEN - 2) + "}").format(title) + "|"
+        return outer_line + "\n" + middle_line + "\n" + outer_line
