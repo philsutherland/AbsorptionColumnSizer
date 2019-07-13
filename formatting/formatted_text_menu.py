@@ -29,7 +29,14 @@ class FormattedTextMenu:
 
     @staticmethod
     def body_content(content):
-        pass
+        outer_line = "|" + "-" * (MENU_LEN - 2) + "|"
+        string_list = content.split('\n')
+        content_text = ""
+
+        for string in string_list:
+            content_text += "|" + \
+                ("{:<" + str(MENU_LEN - 2) + "}").format(string) + "|\n"
+        return content_text + outer_line
 
     @staticmethod
     def error_title(title):

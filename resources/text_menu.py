@@ -17,7 +17,6 @@ class TextMenu:
         print(FormattedTextMenu.sub_title(self.title))
 
         if self.message:
-            print(FormattedTextMenu.error_title("There is a message!"))
             print(FormattedTextMenu.body_content(self.message))
 
         print(FormattedTextMenu.options_menu(menu_options))
