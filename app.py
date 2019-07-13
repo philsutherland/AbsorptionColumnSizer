@@ -20,12 +20,12 @@ def optimize_absorption_column(previous_menu):
     pass
 
 
-about_us = """ This program was built by:
-   - David Beckham (alias)
-   - Peter Quill (alias)
-   - Devan Ethans (alias) 
-   - Sparkling Soda (alias)
-   - Ken Bong (alias)"""
+about_us = """ This program was designed and built by Phil Sutherland
+ with some help from:
+   - Iain Bowie
+   - Dave Evans
+   - Rachel Elizabeth
+   - Ben King"""
 
 sizing_instructions = """   a) Open the file containing the software .java files
    b) Double click on the 'Inputs' folder to access files
