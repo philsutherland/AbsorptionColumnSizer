@@ -4,8 +4,9 @@ import os
 
 
 class TextMenu:
-    def __init__(self, title, options):
+    def __init__(self, title, message, options):
         self.title = title
+        self.message = message
         self.options = options
 
     def navigate(self, previous_menu):
@@ -30,14 +31,11 @@ class TextMenu:
             self.navigate(self)
 
         if str(selection) in nav_map:
-            if nav_map[str(selection)] == "Return":
+            if self.options[nav_map[str(selection)]] == "return":
                 TextMenu.clear()
                 previous_menu.navigate(self)
-            elif nav_map[str(selection)] == "About":
                 pass
-            elif nav_map[str(selection)] == "Instructions":
-                pass
-            elif nav_map[str(selection)] == "Exit":
+            elif self.options[nav_map[str(selection)]] == "exit":
                 TextMenu.clear()
                 print(FormattedTextMenu.main_title("Goodbye!"))
                 exit(0)
