@@ -30,10 +30,14 @@ class TextMenu:
             self.navigate(self)
 
         if str(selection) in nav_map:
-            if self.options[nav_map[str(selection)]] == "return":
+            if nav_map[str(selection)] == "Return":
                 TextMenu.clear()
                 previous_menu.navigate(self)
-            elif self.options[nav_map[str(selection)]] == "exit":
+            elif nav_map[str(selection)] == "About":
+                pass
+            elif nav_map[str(selection)] == "Instructions":
+                pass
+            elif nav_map[str(selection)] == "Exit":
                 TextMenu.clear()
                 print(FormattedTextMenu.main_title("Goodbye!"))
                 exit(0)
