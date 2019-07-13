@@ -4,14 +4,17 @@ import os
 
 
 class TextMenu:
-    def __init__(self, title, message, options):
+    def __init__(self, title, message="", options={'Return': 'return', 'Exit': 'exit'}):
         self.title = title
         self.message = message
         self.options = options
 
-    def navigate(self, previous_menu):
-        if previous_menu is None:
-            previous_menu = self
+    def navigate(self, previous_menu, returning=False):
+        if not returning:
+            if previous_menu is None:
+                self.previous_menu = self
+            else:
+                self.previous_menu = previous_menu
 
         menu_options = list(self.options)
         print(FormattedTextMenu.sub_title(self.title))
@@ -32,12 +35,12 @@ class TextMenu:
         except(BaseException):
             TextMenu.clear()
             print(FormattedTextMenu.error_title("Invalid Selection!"))
-            self.navigate(self)
+            self.navigate(self, True)
 
         if str(selection) in nav_map:
             if self.options[nav_map[str(selection)]] == "return":
                 TextMenu.clear()
-                previous_menu.navigate(self)
+                self.previous_menu.navigate(self, True)
                 pass
             elif self.options[nav_map[str(selection)]] == "exit":
                 TextMenu.clear()
@@ -49,7 +52,7 @@ class TextMenu:
         else:
             TextMenu.clear()
             print(FormattedTextMenu.error_title("Invalid Selection!"))
-            self.navigate(self)
+            self.navigate(self, True)
 
     @staticmethod
     def clear():
