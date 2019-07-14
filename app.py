@@ -7,16 +7,29 @@ print("\n" + FormattedTextMenu.main_title("Welcome to AbsorbSim Pro V2.0"))
 
 def size_absorption_column(previous_menu):
     # Do some calculations
-    # Create a string with final answers
-    # Create a menu object with the final answer string as the message
-    pass
+    content = """ Final parameters:
+      x_Ai: %6.3f 
+      y_Ai: %6.3f
+      x_AL: %6.3f
+      y_AG: %6.3f
+      dZ_L: %6.3f
+      dZ_V: %6.3f
+      Liquid Height: %6.3f
+      Vapour Height: %6.3f
+      Required Height: %6.3f 
+
+
+      The equilibrium data profile may be found in /Outputs"""
+
+    results_menu = TextMenu(title="Results", message=content)
+    results_menu.navigate(previous_menu)
 
 
 def optimize_absorption_column(previous_menu):
-    # Do some calculations
-    # Create a string with final answers
-    # Create a menu object with the final answer string as the message
-    # Call meun object -> object.navigate(previous_menu)
+        # Do some calculations
+        # Create a string with final answers
+        # Create a menu object with the final answer string as the message
+        # Call meun object -> object.navigate(previous_menu)
     pass
 
 
