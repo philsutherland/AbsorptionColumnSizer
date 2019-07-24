@@ -7,7 +7,19 @@ print("\n" + FormattedTextMenu.main_title("Welcome to AbsorbSim Pro V2.0"))
 
 
 def print_equilibrium_profile_to_CSV(equilibrium_profile):
-    pass
+    datetime_object = datetime.datetime.now()
+    file_name = "outputs/Simulation results " + \
+        str(datetime_object).replace(" ", " at ")
+
+    # If file exists, wipe contents
+    if (os.path.isfile(file_name)):
+        f = open(file_name, "a+")
+        f.write("")
+    else:
+        f = open(file_name, "w+")
+
+    f.write(equilibrium_profile)
+    f.close()
 
 
 def size_absorption_column(previous_menu):
@@ -25,6 +37,8 @@ def size_absorption_column(previous_menu):
 
 
       The equilibrium data profile may be found in /Outputs"""
+
+    print_equilibrium_profile_to_CSV(content)
 
     results_menu = TextMenu(title="Results", message=content)
     results_menu.navigate(previous_menu)
@@ -78,5 +92,4 @@ main_menu = TextMenu(title="Main Menu", options={'Size Absorption Column Menu': 
                                                  'Optimize Absorption Column Menu': optimize_absorption_column_menu.navigate, 'About': about.navigate, 'Exit': 'exit'})
 
 
-# size_absorption_column_instructions.navigate(None)
 main_menu.navigate(None)
