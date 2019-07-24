@@ -1,8 +1,13 @@
 from resources.text_menu import TextMenu
 from formatting.formatted_text_menu import FormattedTextMenu
 import os
+import datetime
 
 print("\n" + FormattedTextMenu.main_title("Welcome to AbsorbSim Pro V2.0"))
+
+
+def print_equilibrium_profile_to_CSV(equilibrium_profile):
+    pass
 
 
 def size_absorption_column(previous_menu):
