@@ -10,7 +10,7 @@ def print_equilibrium_profile_to_CSV(equilibrium_profile):
     datetime_object = datetime.datetime.now()
     file_name = "outputs/Simulation results " + \
         str(datetime_object).replace(
-            " ", " at time ").replace(":", "-").split(".")[0]
+            " ", " at time ").replace(":", "-").split(".")[0] + ".csv"
 
     # If file exists, wipe contents
     if (os.path.isfile(file_name)):
