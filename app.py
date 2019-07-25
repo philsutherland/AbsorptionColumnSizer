@@ -1,19 +1,11 @@
 from resources.text_menu import TextMenu
 from formatting.formatted_text_menu import FormattedTextMenu
 from exceptions.could_not_construct_object_exception import CouldNotConstructObjectException
+from staticresources.constant import Constant
 import os
 import datetime
 
-
-def skylar_boobs():
-    if True:
-        raise CouldNotConstructObjectException("AbsorptionColumn")
-
-
-try:
-    skylar_boobs()
-except CouldNotConstructObjectException as e:
-    print(e)
+print(Constant.num_step_upper_limit())
 
 
 # print("\n" + FormattedTextMenu.main_title("Welcome to AbsorbSim Pro V2.0"))

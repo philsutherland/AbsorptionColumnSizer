@@ -1,6 +1,6 @@
 from formatting.formatted_text_menu import FormattedTextMenu
+from staticresources.constant import Constant
 from sys import exit
-import os
 
 
 class TextMenu:
@@ -33,28 +33,23 @@ class TextMenu:
         try:
             selection = int(input("Select Option: "))
         except(BaseException):
-            TextMenu.clear()
+            Constant.clear()
             print(FormattedTextMenu.error_title("Invalid Selection!"))
             self.navigate(self, True)
 
         if str(selection) in nav_map:
             if self.options[nav_map[str(selection)]] == "return":
-                TextMenu.clear()
+                Constant.clear()
                 self.previous_menu.navigate(self, True)
                 pass
             elif self.options[nav_map[str(selection)]] == "exit":
-                TextMenu.clear()
+                Constant.clear()
                 print(FormattedTextMenu.main_title("Goodbye!"))
                 exit(0)
             else:
-                TextMenu.clear()
+                Constant.clear()
                 self.options[nav_map[str(selection)]](self)
         else:
-            TextMenu.clear()
+            Constant.clear()
             print(FormattedTextMenu.error_title("Invalid Selection!"))
             self.navigate(self, True)
-
-    @staticmethod
-    def clear():
-        os.system("cls")
-        print("")
