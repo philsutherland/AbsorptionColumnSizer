@@ -1,0 +1,2 @@
+class CouldNotConstructObjectException(Exception):
+    pass
