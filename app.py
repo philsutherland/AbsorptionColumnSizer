@@ -9,7 +9,8 @@ print("\n" + FormattedTextMenu.main_title("Welcome to AbsorbSim Pro V2.0"))
 def print_equilibrium_profile_to_CSV(equilibrium_profile):
     datetime_object = datetime.datetime.now()
     file_name = "outputs/Simulation results " + \
-        str(datetime_object).replace(" ", " at ")
+        str(datetime_object).replace(
+            " ", " at time ").replace(":", "-").split(".")[0]
 
     # If file exists, wipe contents
     if (os.path.isfile(file_name)):
