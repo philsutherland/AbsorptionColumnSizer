@@ -95,5 +95,6 @@ class Constant:
             "Critical Error: Unknown exception occured when attempting to open EquilibriumData.txt!")
 
     # Read in equilibrium coefficients from EquilibriumData.txt
-    try:
-        f_equilibrium.readline()
+    # try:
+    #     f_equilibrium.readline()
+    #     pass
