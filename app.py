@@ -68,7 +68,7 @@ about_us = """ This program was designed and built by Phil Sutherland
    - Ben King"""
 
 sizing_instructions = """   
-    a) Open the file containing the software .java files
+    a) Open the file containing the software .py files
     b) Double click on the 'Inputs' folder to access files
        for input parameters, constants and equlibirum data
     c) Open the text file called InputValues and enter

@@ -1,3 +1,4 @@
+# Change this constant to increase/decrease maximum printout length
 MENU_LEN = 63
 
 
