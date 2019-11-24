@@ -14,3 +14,6 @@ class Column:
             self.column_area = 23
         else:
             raise CouldNotConstructObjectException("Column")
+
+    def num_step_in_range_check(num_step):
+        pass
