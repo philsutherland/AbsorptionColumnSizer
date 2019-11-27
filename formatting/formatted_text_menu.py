@@ -1,3 +1,5 @@
+import os
+
 # Change this constant to increase/decrease maximum printout length
 MENU_LEN = 63
 
@@ -45,3 +47,8 @@ class FormattedTextMenu:
         middle_line = "|" + \
             ("{:^" + str(MENU_LEN - 2) + "}").format(title) + "|"
         return outer_line + "\n" + middle_line + "\n" + outer_line
+
+    @staticmethod
+    def clear():
+        os.system("cls")
+        print("")
